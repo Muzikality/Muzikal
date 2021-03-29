@@ -15,17 +15,17 @@
 
   <!-- Favicon -->
 	<link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon"/>
-
+	
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
   
 	<!-- Stylesheets -->
-	<link rel="stylesheet"   href="{{ asset('/css/bootstrap.css') }}"/>
-	<link rel="stylesheet"   href="{{ asset('/css/font-awesome.min.css') }}"/>
-	<link rel="stylesheet"   href="{{ asset('/css/owl.carousel.min.css') }}"/>
-	<link rel="stylesheet"   href="{{ asset('/css/css/slicknav.min.css') }}"/>
-	<link rel="stylesheet"   href="{{ asset('/css/style.css') }}"/>
-	<link rel="stylesheet"   href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	<link rel="stylesheet"   href="{{ secure_asset('/css/bootstrap.css') }}"/>
+	<link rel="stylesheet"   href="{{ secure_asset('/css/font-awesome.min.css') }}"/>
+	<link rel="stylesheet"   href="{{ secure_asset('/css/owl.carousel.min.css') }}"/>
+	<link rel="stylesheet"   href="{{ secure_asset('/css/css/slicknav.min.css') }}"/>
+	<link rel="stylesheet"   href="{{ secure_asset('/css/style.css') }}"/>
+	<link rel="stylesheet"   href="{{ secure_asset('/css/app.css') }}" rel="stylesheet">
   </head>
   <body>
   
