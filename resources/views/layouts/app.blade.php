@@ -9,70 +9,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Muzikal</title>
      <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <link href="{{ secure_asset('/css/app.css') }}" rel="stylesheet">
+    
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
   <!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
-
+	<link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon"/>
+	
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
   
 	<!-- Stylesheets -->
-	<link rel="stylesheet"   href="{{ secure_asset('/css/bootstrap.css') }}"/>
-	<link rel="stylesheet"   href="{{ secure_asset('/css/font-awesome.min.css') }}"/>
-	<link rel="stylesheet"   href="{{ secure_asset('/css/owl.carousel.min.css') }}"/>
-	<link rel="stylesheet"   href="{{ secure_asset('/css/css/slicknav.min.css') }}"/>
-
-	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="{{ secure_asset('/css/style.css') }}"/>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<link rel="stylesheet"   href="{{ asset('/css/bootstrap.css') }}"/>
+	<link rel="stylesheet"   href="{{ asset('/css/font-awesome.min.css') }}"/>
+	<link rel="stylesheet"   href="{{ asset('/css/owl.carousel.min.css') }}"/>
+	<link rel="stylesheet"   href="{{ asset('/css/css/slicknav.min.css') }}"/>
+	<link rel="stylesheet"   href="{{ asset('/css/style.css') }}"/>
+	<link rel="stylesheet"   href="{{ asset('/css/app.css') }}"/>
   </head>
   <body>
-  
+		
   <div id="preloder">
 		<div class="loader"></div>
 	</div>
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle Navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Muzikal</a>
         </div>
-        
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <header class="header-section clearfix">
-            <a href="index.html" class="site-logo">
-              <img src="img/logo.png" alt="">
+            <a href="{{ url('/') }}" class="site-logo">
+              <img src="{{ asset('images/logo.png') }}" alt="">
             </a>
           <ul class="main-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="{{ url('/about') }}">About</a></li>
             <li><a href="#">Pages</a>
               <ul class="sub-menu">
-                <li><a href="category.html">Category</a></li>
-                <li><a href="playlist.html">Playlist</a></li>
-                <li><a href="artist.html">Artist</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{ url('/category') }}">Category</a></li>
+                <li><a href="{{ url('/playlist') }}">Playlist</a></li>
+                <li><a href="{{ url('/artist') }}">Artist</a></li>
+                <li><a href="{{ url('/blog') }}">Blog</a></li>
+                <li><a href="{{ url('/contact') }}">Contact</a></li>
               </ul>
             </li>
-            <li><a href="blog.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url ('/blog') }}">News</a></li>
+            <li><a href="{{ url ('/contact') }}">Contact</a></li>
+												
+												 
             @if (Auth::guest())
             <li>
               <a href="{{ url('/auth/login') }}">Login</a>
@@ -103,59 +91,78 @@
             @endif
           </ul>
         </header>
-        </div>
-      </div>
     </nav>
-    <div class="container">
-      @if (Session::has('message'))
-      <div class="flash alert-info">
-        <p class="panel-body">
-          {{ Session::get('message') }}
-        </p>
-      </div>
-      @endif
-      @if ($errors->any())
-      <div class='flash alert-danger'>
-        <ul class="panel-body">
-          @foreach ( $errors->all() as $error )
-          <li>
-            {{ $error }}
-          </li>
-          @endforeach
-        </ul>
-      </div>
-      @endif
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2>@yield('title')</h2>
-              @yield('title-meta')
-            </div>
-            <div class="panel-body">
-              @yield('content')
-            </div>
-          </div>
-        </div>
-      </div>
+     
+    @yield('content')
+     
+       
 
-
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <p>Copyright © 2021 | <a href=#>weblitter</a></p>
-        </div>
-      </div>
-    </div>
-    <!-- Scripts -->
+<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-7 order-lg-2">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="footer-widget">
+								<h2>About us</h2>
+								<ul>
+									<li><a href="">Our Story</a></li>
+									<li><a href="">Sol Music Blog</a></li>
+									<li><a href="">History</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="footer-widget">
+								<h2>Products</h2>
+								<ul>
+									<li><a href="">Music</a></li>
+									<li><a href="">Subscription</a></li>
+									<li><a href="">Custom Music</a></li>
+									<li><a href="">Footage</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="footer-widget">
+								<h2>Playlists</h2>
+								<ul>
+									<li><a href="">Newsletter</a></li>
+									<li><a href="">Careers</a></li>
+									<li><a href="">Press</a></li>
+									<li><a href="">Contact</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 col-lg-5 order-lg-1">
+					<img src="{{ asset('images/logo.png')}}" alt="">
+					
+					
+					<div class="social-links">
+						<a href=""><i class="fa fa-instagram"></i></a>
+						<a href=""><i class="fa fa-pinterest"></i></a>
+						<a href=""><i class="fa fa-facebook"></i></a>
+						<a href=""><i class="fa fa-twitter"></i></a>
+						<a href=""><i class="fa fa-youtube"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+	
+	<!--====== Javascripts & Jquery ======-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-  <script src="{{ URL::secure_asset('js/jquery-3.2.1.min.js') }}"></script>
-	<script src="{{ URL::secure_asset('js/bootstrap.min.js') }}"></script>
-	<script src="{{ URL::secure_asset('js/jquery.slicknav.min.js') }}"></script>
-	<script src="{{ URL::secure_asset('js/owl.carousel.min.js') }}"></script>
-	<script src="{{ URL::secure_asset('js/mixitup.min.js') }}"></script>
-	<script src="{{ URL::secure_asset('js/main.js') }}"></script>
-
+    
+ <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/jquery.slicknav.min.js') }}"></script>
+	<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+	<script src="{{ asset('js/mixitup.min.js') }}"></script>
+	<script src="{{ asset('js/main.js') }}"></script>
   </body>
 </html>

@@ -1,79 +1,13 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-	<title>SolMusic | HTML Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="SolMusic HTML Template">
-	<meta name="keywords" content="music, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
-
-	<!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
- 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/slicknav.min.css"/>
-
-	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
+@extends('layouts.app')
 
 
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
-</head>
-<body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
-
-	<!-- Header section -->
-	<header class="header-section clearfix">
-		<a href="index
-		.html" class="site-logo">
-			<img src="img/logo.png" alt="">
-		</a>
-		<div class="header-right">
-			<a href="#" class="hr-btn">Help</a>
-			<span>|</span>
-			<div class="user-panel">
-				<a href="" class="login">Login</a>
-				<a href="" class="register">Create an account</a>
-			</div> 
-		</div>
-		<ul class="main-menu">
-			<li><a href="index
-				.html">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Pages</a>
-				<ul class="sub-menu">
-					<li><a href="category.html">Category</a></li>
-					<li><a href="playlist.html">Playlist</a></li>
-					<li><a href="artist.html">Artist</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</li>
-			<li><a href="blog.html">News</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</header>
-	<!-- Header section end -->
-
+@section('content')
 	<!-- Player section -->
-	<section class="player-section set-bg" data-setbg="img/player-bg.jpg">
+	<section class="player-section set-bg" data-setbg="images/player-bg.jpg">
 		<div class="player-box">
 			<div class="tarck-thumb-warp">
 				<div class="tarck-thumb">
-					<img src="img/wave-thumb.jpg" alt="">
+					<img src="{{ asset('images/wave-thumb.jpg') }}" alt="">
 					<button onclick="wavesurfer.playPause();" class="wp-play"></button>
 				</div>
 			</div>
@@ -87,9 +21,9 @@
 					</div>
 					<div class="col-lg-4">
 						<div class="songs-links">
-							<a href=""><img src="img/icons/p-1.png" alt=""></a>
-							<a href=""><img src="img/icons/p-2.png" alt=""></a>
-							<a href=""><img src="img/icons/p-3.png" alt=""></a>
+							<a href=""><img src="{{ asset('images/icons/p-1.png') }}" alt=""></a>
+							<a href=""><img src="{{ asset('images/icons/p-2.png') }}" alt=""></a>
+							<a href=""><img src="{{ asset('images/icons/p-3.png') }}" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -109,7 +43,7 @@
 		</div>
 	</section>
 	<!-- Player section end -->
-
+	
 	<!-- Songs details section -->
 	<section class="songs-details-section">
 		<div class="container-fluid">
@@ -130,7 +64,7 @@
 							<div class="song-details-box">
 								<h3>About the Artist</h3>
 								<div class="artist-details">
-									<img src="img/artist.jpg" alt="">
+									<img src="{{ asset('images/artist.jpg') }}" alt="">
 									<div class="ad-text">
 										<h5>Michael Smith</h5>
 										<span>Artist/ Songwriter</span>
@@ -147,7 +81,7 @@
 									<div class="row">
 										<div class="col-xl-5 col-lg-12 col-md-5">
 											<div class="song-info-box">
-												<img src="img/songs/1.jpg" alt="">
+												<img src="{{ asset('images/songs/1.jpg') }}" alt="">
 												<div class="song-info">
 													<h4>Jennifer Brown</h4>
 													<p>One Night in Ibiza</p>
@@ -195,7 +129,7 @@
 									<div class="row">
 										<div class="col-xl-5 col-lg-12 col-md-5">
 											<div class="song-info-box">
-												<img src="img/songs/2.jpg" alt="">
+												<img src="{{ asset('images/songs/2.jpg') }}" alt="">
 												<div class="song-info">
 													<h4>Michael Smith</h4>
 													<p>Dream in colors</p>
@@ -254,7 +188,7 @@
 			<div class="row">
 				<div class="col-xl-3 col-sm-6">
 					<div class="similar-song">
-						<img class="ss-thumb" src="img/playlist/1.jpg" alt="">
+						<img class="ss-thumb" src="{{ asset('images/playlist/1.jpg') }}" alt="">
 						<h4>Jennifer Brown</h4>
 						<p>One Night in Ibiza</p>
 						<div class="single_player">
@@ -264,9 +198,9 @@
 									<!-- Player Controls -->
 									<div class="ss-controls">
 										<div class="songs-links">
-											<a href=""><img src="img/icons/p-1.png" alt=""></a>
-											<a href=""><img src="img/icons/p-2.png" alt=""></a>
-											<a href=""><img src="img/icons/p-3.png" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-1.png') }}" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-2.png') }}" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-3.png') }}" alt=""></a>
 										</div>
 										<div class="player_controls_box">
 											<button class="jp-prev player_button" tabindex="0"></button>
@@ -297,7 +231,7 @@
 				</div>
 				<div class="col-xl-3 col-sm-6">
 					<div class="similar-song">
-						<img class="ss-thumb" src="img/playlist/2.jpg" alt="">
+						<img class="ss-thumb" src="{{ asset('images/playlist/2.jpg') }}" alt="">
 						<h4>Jennifer Brown</h4>
 						<p>One Night in Ibiza</p>
 						<div class="single_player">
@@ -307,9 +241,9 @@
 									<!-- Player Controls -->
 									<div class="ss-controls">
 										<div class="songs-links">
-											<a href=""><img src="img/icons/p-1.png" alt=""></a>
-											<a href=""><img src="img/icons/p-2.png" alt=""></a>
-											<a href=""><img src="img/icons/p-3.png" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-1.png') }}" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-2.png') }}" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-3.png') }}" alt=""></a>
 										</div>
 										<div class="player_controls_box">
 											<button class="jp-prev player_button" tabindex="0"></button>
@@ -340,7 +274,7 @@
 				</div>
 				<div class="col-xl-3 col-sm-6">
 					<div class="similar-song">
-						<img class="ss-thumb" src="img/playlist/3.jpg" alt="">
+						<img class="ss-thumb" src="{{ asset('images/playlist/3.jpg') }}" alt="">
 						<h4>Jennifer Brown</h4>
 						<p>One Night in Ibiza</p>
 						<div class="single_player">
@@ -350,9 +284,9 @@
 									<!-- Player Controls -->
 									<div class="ss-controls">
 										<div class="songs-links">
-											<a href=""><img src="img/icons/p-1.png" alt=""></a>
-											<a href=""><img src="img/icons/p-2.png" alt=""></a>
-											<a href=""><img src="img/icons/p-3.png" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-1.png') }}" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-2.png') }}" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-3.png') }}" alt=""></a>
 										</div>
 										<div class="player_controls_box">
 											<button class="jp-prev player_button" tabindex="0"></button>
@@ -383,7 +317,7 @@
 				</div>
 				<div class="col-xl-3 col-sm-6">
 					<div class="similar-song">
-						<img class="ss-thumb" src="img/playlist/4.jpg" alt="">
+						<img class="ss-thumb" src="{{ asset('images/playlist/4.jpg') }}" alt="">
 						<h4>Jennifer Brown</h4>
 						<p>One Night in Ibiza</p>
 						<div class="single_player">
@@ -393,9 +327,9 @@
 									<!-- Player Controls -->
 									<div class="ss-controls">
 										<div class="songs-links">
-											<a href=""><img src="img/icons/p-1.png" alt=""></a>
-											<a href=""><img src="img/icons/p-2.png" alt=""></a>
-											<a href=""><img src="img/icons/p-3.png" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-1.png') }}" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-2.png') }}" alt=""></a>
+											<a href=""><img src="{{ asset('images/icons/p-3.png') }}" alt=""></a>
 										</div>
 										<div class="player_controls_box">
 											<button class="jp-prev player_button" tabindex="0"></button>
@@ -429,72 +363,6 @@
 	</section>
 	<!-- Similar Songs section end -->
 
-	<!-- Footer section -->
-	<footer class="footer-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-6 col-lg-7 order-lg-2">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="footer-widget">
-								<h2>About us</h2>
-								<ul>
-									<li><a href="">Our Story</a></li>
-									<li><a href="">Sol Music Blog</a></li>
-									<li><a href="">History</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="footer-widget">
-								<h2>Products</h2>
-								<ul>
-									<li><a href="">Music</a></li>
-									<li><a href="">Subscription</a></li>
-									<li><a href="">Custom Music</a></li>
-									<li><a href="">Footage</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="footer-widget">
-								<h2>Playlists</h2>
-								<ul>
-									<li><a href="">Newsletter</a></li>
-									<li><a href="">Careers</a></li>
-									<li><a href="">Press</a></li>
-									<li><a href="">Contact</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-6 col-lg-5 order-lg-1">
-					<img src="img/logo.png" alt="">
-					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-					<div class="social-links">
-						<a href=""><i class="fa fa-instagram"></i></a>
-						<a href=""><i class="fa fa-pinterest"></i></a>
-						<a href=""><i class="fa fa-facebook"></i></a>
-						<a href=""><i class="fa fa-twitter"></i></a>
-						<a href=""><i class="fa fa-youtube"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer section end -->
-	
-	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/mixitup.min.js"></script>
-	<script src="js/main.js"></script>
-
 	<!-- Audio Players js -->
 	<script src="js/jquery.jplayer.min.js"></script>
 	<script src="js/wavesurfer.min.js"></script>
@@ -502,6 +370,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Audio Players Initialization -->
 	<script src="js/WaveSurferInit.js"></script>
 	<script src="js/jplayerInit.js"></script>
-
-	</body>
-</html>
+@endsection
