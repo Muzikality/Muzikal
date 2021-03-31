@@ -23,7 +23,7 @@
       </div>
       <div class="sidebar">
         <div class="searchform">
-          <form id="formsearch" name="formsearch" method="post" action="#">
+          <form id="formsearch" name="formsearch" method="GET" action="#">
             <span>
             <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="Search our ste:" type="text" />
             </span>
