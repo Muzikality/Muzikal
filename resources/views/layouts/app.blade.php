@@ -121,17 +121,11 @@
 							<div class="footer-widget">
 								<h2>Playlists</h2>
 								<ul>
-<<<<<<< HEAD
-									<li><a href="">Newsletter</a></li>
-									<li><a href="">Careers</a></li>
-									<li><a href="">Press</a></li>
-									<li><a href="contact">Contact</a></li>
-=======
 									<li><a href="{{ url('/blog') }}">Newsletter</a></li>
 									<li><a href="{{ url('/blog') }}">Careers</a></li>
 									<li><a href="{{ url('/blog') }}">Press</a></li>
 									<li><a href="{{ url('/contact') }}">Contact</a></li>
->>>>>>> fc88da06fa50dfd962b43b7313b52fde60717dd3
+
 								</ul>
 							</div>
 						</div>
