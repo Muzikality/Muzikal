@@ -459,7 +459,7 @@
 				<div class="row">
 					<div class="col-lg-4">
 						<div class="song-info-box">
-							<img src="{{ asset('img/songs/8.jpg') }}" alt="">
+							<img src="{{ asset('images/songs/8.jpg') }}" alt="">
 							<div class="song-info">
 								<h4>The Reds</h4>
 								<p>Love is in the air</p>
