@@ -21,6 +21,7 @@
   
 	<!-- Stylesheets -->
 	<link rel="stylesheet"   href="{{ asset('/css/bootstrap.css') }}"/>
+    <link rel="stylesheet"   href="{{ asset('/css/top.css') }}"/>
 	<link rel="stylesheet"   href="{{ asset('/css/font-awesome.min.css') }}"/>
 	<link rel="stylesheet"   href="{{ asset('/css/owl.carousel.min.css') }}"/>
 	<link rel="stylesheet"   href="{{ asset('/css/css/slicknav.min.css') }}"/>
@@ -148,7 +149,10 @@
 		</div>
 	</footer>
 	<!-- Footer section end -->
-	
+	<a class="top-link hide" href="" id="js-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+        <span class="screen-reader-text">Back to top</span>
+    </a>
 	<!--====== Javascripts & Jquery ======-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -159,5 +163,6 @@
 	<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 	<script src="{{ asset('js/mixitup.min.js') }}"></script>
 	<script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/top.js') }}"></script>
   </body>
 </html>

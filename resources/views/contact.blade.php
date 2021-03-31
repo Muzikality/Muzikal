@@ -7,14 +7,6 @@
 	<section class="contact-section">
 		<div class="container-fluid">
 			<div class="row">
-<<<<<<< HEAD
-				<div class="col-lg-6 p-0">
-					<!-- Map -->
-					<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15958.628416152262!2d37.4574674!3d-0.5150709!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1617096045748!5m2!1sen!2ske" style="border:0" allowfullscreen></iframe></div>
-				</div>
-=======
-		
->>>>>>> fc88da06fa50dfd962b43b7313b52fde60717dd3
 				<div class="col-lg-6 p-0">
 					<div class="contact-warp">
 				
