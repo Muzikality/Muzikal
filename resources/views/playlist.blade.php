@@ -109,6 +109,11 @@
 						<h5>Minimal</h5>
 					</div>
 				</div>
+                <div class="mix col-lg-3 col-md-4 col-sm-6 movies">
+                    <div class="audio">
+                        <audio controls="autoplay" style="margin-left: 50px;"><source src="{{ asset('images/songs/Adventures_-_A_Himitsu_·_[Free_Copyright-safe_Music](128k).mp3') }}"/></audio><br/><a>Adventures_-_A_Himitsu_·_[Free_Copyright-safe_Music](128k)</a>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</section>

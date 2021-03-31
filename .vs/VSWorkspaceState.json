@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\public",
+    "\\public\\css",
+    "\\resources\\css",
+    "\\resources\\views",
+    "\\resources\\views\\auth",
+    "\\resources\\views\\layouts"
+  ],
+  "SelectedNode": "\\public\\css\\app.css",
+  "PreviewInSolutionExplorer": false
+}
