@@ -2,8 +2,9 @@
 	<!-- Header section end -->
 	
 	@section('content')
-<link href="{{ asset('css/about.css') }}" rel="stylesheet" />
-<div class="content">
+
+  <link href="{{ asset('/css/about.css') }}" rel="stylesheet"/>
+  <div class="content">
     <div class="content_resize">
       <div class="mainbar">
         <div class="article">

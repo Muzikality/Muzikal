@@ -14,7 +14,7 @@
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
   <!-- Favicon -->
-	<link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon"/>
+	<link href="{{ asset('images/site.png') }}" rel="shortcut icon"/>
 	
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
@@ -43,8 +43,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <header class="header-section clearfix">
             <a href="{{ url('/') }}" class="site-logo">
-              <img src="{{ asset('images/logo.png') }}" alt="">
+              <img src="{{ asset('images/muzikal.png')  }}" width="200px" height="70px" alt="">
             </a>
+            
+
           <ul class="main-menu">
             <li><a href="{{ url('/') }}">Home</a></li>
             <li><a href="{{ url('/about') }}">About</a></li>
@@ -58,8 +60,9 @@
               </ul>
             </li>
             <li><a href="{{ url ('/contact') }}">Contact</a></li>
-												
-												 
+            
+				
+          
             @if (Auth::guest())
             <li>
               <a href="{{ url('/auth/login') }}">Login</a>
@@ -80,13 +83,12 @@
               </ul>
             </li>
             @endif
+          
           </ul>
         </header>
     </nav>
      
     @yield('content')
-     
-       
 
 <!-- Footer section -->
 	<footer class="footer-section">
@@ -98,8 +100,8 @@
 							<div class="footer-widget">
 								<h2>About us</h2>
 								<ul>
-									<li><a href="">Our Story</a></li>
-									<li><a href="">Sol Music Blog</a></li>
+									<li><a href="{{ url('/about') }}">Our Story</a></li>
+									<li><a href="{{ url('/blog') }}">Muzikal Blog</a></li>
 									<li><a href="">History</a></li>
 								</ul>
 							</div>
@@ -119,17 +121,24 @@
 							<div class="footer-widget">
 								<h2>Playlists</h2>
 								<ul>
+<<<<<<< HEAD
 									<li><a href="">Newsletter</a></li>
 									<li><a href="">Careers</a></li>
 									<li><a href="">Press</a></li>
 									<li><a href="contact">Contact</a></li>
+=======
+									<li><a href="{{ url('/blog') }}">Newsletter</a></li>
+									<li><a href="{{ url('/blog') }}">Careers</a></li>
+									<li><a href="{{ url('/blog') }}">Press</a></li>
+									<li><a href="{{ url('/contact') }}">Contact</a></li>
+>>>>>>> fc88da06fa50dfd962b43b7313b52fde60717dd3
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-6 col-lg-5 order-lg-1">
-					<img src="{{ asset('images/logo.png')}}" alt="">
+					<img src="{{ asset('images/muzikal.png')}}" width="200px" height="70px" alt="">
 					
 					
 					<div class="social-links">

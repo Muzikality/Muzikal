@@ -3,7 +3,7 @@
 
 @section('content')
 	<!-- Player section -->
-	<section class="player-section set-bg" data-setbg="images/player-bg.jpg">
+	<section class="player-section set-bg" data-setbg="{{ asset('images/player-bg.jpg') }}">
 		<div class="player-box">
 			<div class="tarck-thumb-warp">
 				<div class="tarck-thumb">
